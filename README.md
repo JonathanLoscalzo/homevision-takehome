@@ -33,26 +33,27 @@ This is a take home interview for HomeVision that focuses primarily on writing c
     │   │   └── train_model.py
     │   │
 
-
-
 --------
-
-
-## References
-
-- Project structure based on [https://drivendata.github.io/cookiecutter-data-science/](cookiecutter-data-science/)
 
 ## ML Process
 
 This process is a generic one, but it could be different for other scenarios.
 
-- analyze and understand the information
+- analyze and understand the information (exploratory analysis)
 - feature engineering: clean, transform, validate(TODO)
 - train some regression algorithms with default hyperparameters
-- select the best one (using cross-validation)
+    - select the best one (using cross-validation)
 - tune it (with optuna or grid/random search)
-- serve the best one.
+- serve it 
 
+### Metrics
+
+There are some metrics tracked in mlflow :
+- Root Mean Squared Error(rmse): same unit as feature, large errors are punished
+- Mean Absolute Error(mae): same scale as feature, errors has the same weight
+- R2(r2): is a ratio between the variance explained by the model and the total variance.
+
+I will select `rmse` because the problem needs to punish big errors.
 
 ## First steps
 
@@ -60,7 +61,22 @@ This process is a generic one, but it could be different for other scenarios.
 python -m venv
 source venv/bin/activate
 pip install -r requirements.txt
+pre-commit install
+pip install -e . 
 ```
+
+Execute an experiment
+
+```
+# it runs a model selection experiment
+python -m homevision.experiments.model_v1
+```
+
+View experiments in UI:
+```
+mlflow ui
+```
+
 
 ## Interesting stuffs
 
@@ -74,6 +90,7 @@ pip install -r requirements.txt
 
 ## Enhancements
 
+- use `sklearn-pipeline`
 - use [DVC](https://dvc.org/) for data sources
 - use mlflow with a remote tracking server
 - add validations for data (pandera, great-expectations)
@@ -84,3 +101,11 @@ pip install -r requirements.txt
 - data gather pipeline, like airflow or similar
 - github actions to continuous testing/deliver/training
 - use zenml for mlops
+- add other lib/project management
+    - poetry
+    - mlflow project
+    
+
+## References
+
+- Project structure based on [https://drivendata.github.io/cookiecutter-data-science/](cookiecutter-data-science/)
