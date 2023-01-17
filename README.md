@@ -1,7 +1,7 @@
 # HomeVision - Take Home
 
 
-This is a take home interview for HomeVision that focuses primarily on writing clean code that accomplishes a very practical modeling task. Your challenge is to write a script that meets the requirements. 
+This is a take home interview for HomeVision that focuses primarily on writing clean code that accomplishes a very practical modeling task. Your challenge is to write a script that meets the requirements.
 
 ## Project Organization
 
@@ -44,7 +44,7 @@ This process is a generic one, but it could be different for other scenarios.
 - train some regression algorithms with default hyperparameters
     - select the best one (using cross-validation)
 - tune it (with optuna or grid/random search)
-- serve it 
+- serve it
 
 ### Metrics
 
@@ -62,7 +62,7 @@ python -m venv
 source venv/bin/activate
 pip install -r requirements.txt
 pre-commit install
-pip install -e . 
+pip install -e .
 ```
 
 Execute an experiment
@@ -77,6 +77,9 @@ View experiments in UI:
 mlflow ui
 ```
 
+### Notebooks
+- 00_data-analysis.ipynb: exploratory data analysis
+- 01_selection-models.ipynb: get training metrics and select a model
 
 ## Interesting stuffs
 
@@ -86,7 +89,7 @@ mlflow ui
 - pre-commit to ensure black and isort
 
 ## TODO's
-- 
+-
 
 ## Enhancements
 
@@ -104,7 +107,7 @@ mlflow ui
 - add other lib/project management
     - poetry
     - mlflow project
-    
+
 
 ## References
 
