@@ -1,0 +1,15 @@
+artifact_uri: file:///home/jloscalzo/Projects/HomeVision/TakeHomeInterview/mlruns/461092783944107271/212d97e86c4d4042ba6c9ede370c8848/artifacts
+end_time: 1673974237766
+entry_point_name: ''
+experiment_id: '461092783944107271'
+lifecycle_stage: active
+run_id: 212d97e86c4d4042ba6c9ede370c8848
+run_name: DecisionTreeRegressor
+run_uuid: 212d97e86c4d4042ba6c9ede370c8848
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1673974236245
+status: 3
+tags: []
+user_id: jloscalzo
