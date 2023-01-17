@@ -14,6 +14,9 @@ This is a take home interview for HomeVision that focuses primarily on writing c
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
+    ├── mlruns             <- MLFlow runs folder (local storage)
+    │
+    │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
@@ -24,13 +27,11 @@ This is a take home interview for HomeVision that focuses primarily on writing c
     ├── homevision                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
+    │   ├── experiments     <- scripts to run custom experiments
+    │   │   └── model_v1.py <- experiment v1 - model selection
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
+    │   ├── features       <- Scripts to turn raw data into features for modeling
+    │   │   └── build_features_v1.py
     │   │
 
 --------
