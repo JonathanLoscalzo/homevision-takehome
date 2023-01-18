@@ -3,6 +3,8 @@
 
 This is a take home interview for HomeVision that focuses primarily on writing clean code that accomplishes a very practical modeling task. Your challenge is to write a script that meets the requirements.
 
+**IMPORTANT** for executing this exercise, go to [#Steps](#Steps) below
+
 ## Project Organization
 
     ├── LICENSE
@@ -29,9 +31,17 @@ This is a take home interview for HomeVision that focuses primarily on writing c
     │   │
     │   ├── experiments     <- scripts to run custom experiments
     │   │   └── model_v1.py <- experiment v1 - model selection
+    │   │   └── model_v1_tune_xgb.py <- finetune XGBRegresor
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
     │   │   └── build_features_v1.py
+    │   │
+    │   │
+    │   ├── models
+    │   │   └── load.py     <- loading features for models and preprocessors
+    │   │
+    │   ├── ui
+    │   │   └── predictor.py     <- streamlit serving script
     │   │
 
 --------
@@ -56,7 +66,7 @@ There are some metrics tracked in mlflow :
 
 I will select `rmse` because the problem needs to punish big errors.
 
-## First steps
+## Steps
 
 ```
 python -m venv
@@ -78,6 +88,19 @@ View experiments in UI:
 mlflow ui
 ```
 
+After selected the model, tune it
+```
+python -m homevision.experiments.model_v1_tune_xgb
+```
+
+Serving and testing the model (TODO: add an)
+```
+streamlit run homevision/ui/predictor.py
+
+#or if you have a run_id (note the differece between run_id and experiment_id...)
+streamlit run homevision/ui/predictor.py b94cd32f170847c1bf05fbc7cc70da2e
+```
+
 ### Notebooks
 - 00_data-analysis.ipynb: exploratory data analysis
 - 01_selection-models.ipynb: get training metrics and select a model
@@ -90,7 +113,10 @@ mlflow ui
 - pre-commit to ensure black and isort
 
 ## TODO's
--
+- add shapley values for interpretability at ui/predictor.py
+- test other preprocessing steps
+- finetune other models
+- more todo's within the code
 
 ## Enhancements
 

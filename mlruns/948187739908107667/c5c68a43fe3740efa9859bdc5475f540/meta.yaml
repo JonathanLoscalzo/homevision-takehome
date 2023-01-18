@@ -1,0 +1,15 @@
+artifact_uri: file:///home/jloscalzo/Projects/HomeVision/TakeHomeInterview/mlruns/948187739908107667/c5c68a43fe3740efa9859bdc5475f540/artifacts
+end_time: 1674011268403
+entry_point_name: ''
+experiment_id: '948187739908107667'
+lifecycle_stage: active
+run_id: c5c68a43fe3740efa9859bdc5475f540
+run_name: optuna-trials
+run_uuid: c5c68a43fe3740efa9859bdc5475f540
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674011045386
+status: 3
+tags: []
+user_id: jloscalzo

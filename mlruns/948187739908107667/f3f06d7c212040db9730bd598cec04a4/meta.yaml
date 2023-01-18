@@ -1,0 +1,15 @@
+artifact_uri: file:///home/jloscalzo/Projects/HomeVision/TakeHomeInterview/mlruns/948187739908107667/f3f06d7c212040db9730bd598cec04a4/artifacts
+end_time: 1674011193602
+entry_point_name: ''
+experiment_id: '948187739908107667'
+lifecycle_stage: active
+run_id: f3f06d7c212040db9730bd598cec04a4
+run_name: trial-73
+run_uuid: f3f06d7c212040db9730bd598cec04a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1674011193588
+status: 3
+tags: []
+user_id: jloscalzo
